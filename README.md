@@ -3,8 +3,10 @@ An API built with JAVA, to a Medical Bussiness Model.
 
 ## These endpoints have already been added:
 ### MEDICOS - /medicos
-- **POST** - Create one doctor;
 - **GET** - List all doctors;
+- **POST** - Create one doctor;
+- **PUT** - Update one doctor;
 ### PACIENTES - /pacientes
-- **POST** - Create one patient;
 - **GET** - List all patients;
+- **POST** - Create one patient;
+
