@@ -9,5 +9,7 @@ An API built with JAVA, to a Medical Bussiness Model.
 - **PUT** - Update one doctor;
 ### PACIENTES - /pacientes
 - **GET** - List all patients;
+- **DELETE** - Inactivate one patient (soft delete);
 - **POST** - Create one patient;
+- **PUT** - Update one patient;
 
