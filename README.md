@@ -7,3 +7,4 @@ An API built with JAVA, to a Medical Bussiness Model.
 - **GET** - List all doctors;
 ### PACIENTES - /pacientes
 - **POST** - Create one patient;
+- **GET** - List all patients;
