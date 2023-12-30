@@ -17,12 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class ConsultaController {
 
     @Autowired
-    private AgendamentoDeConsultas agendamentoDeConsultas;
+    private AgendamentoDeConsultas service;
 
     @PostMapping
     @Transactional
     public ResponseEntity agendar(@RequestBody @Valid DadosAgendamentoConsulta dados) {
-        agendamentoDeConsultas.agendar(dados);
-        return ResponseEntity.ok(new DadasDetalhamentoConsulta(null, null, null, null));
+        var dto = service.agendar(dados);
+        return ResponseEntity.ok(dto);
     }
 }
