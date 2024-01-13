@@ -39,12 +39,12 @@ class MedicoRepositoryTest {
         var proximoSegundaAs10 = LocalDate.now().with(TemporalAdjusters.next(DayOfWeek.MONDAY))
                 .atTime(10, 0);
 
-        var medico = cadastrarMedico("Medico", "medico@voll.med", "123456", Especialidade.CARDIOLOGIA);
+        var medico = cadastrarMedico("Medico", "medico@voll.med", "123457", Especialidade.ORTOPEDIA);
         var paciente = cadastrarPaciente("Paciente", "paciente@mail.com", "00000000000");
         cadastrarConsulta(medico, paciente, proximoSegundaAs10);
 
         // when ou act
-        var medicoLivre = medicoRepository.escolherMedicoAleatorioLivreNaData(Especialidade.CARDIOLOGIA, proximoSegundaAs10);
+        var medicoLivre = medicoRepository.escolherMedicoAleatorioLivreNaData(Especialidade.ORTOPEDIA, proximoSegundaAs10);
         // then ou assert
         assertThat(medicoLivre).isNull();
     }
@@ -55,9 +55,9 @@ class MedicoRepositoryTest {
         var proximoSegundaAs10 = LocalDate.now().with(TemporalAdjusters.next(DayOfWeek.MONDAY))
                 .atTime(10, 0);
 
-        var medico = cadastrarMedico("Medico", "medico@voll.med", "123456", Especialidade.CARDIOLOGIA);
+        var medico = cadastrarMedico("Medico", "medico@voll.med", "123457", Especialidade.ORTOPEDIA);
 
-        var medicoLivre = medicoRepository.escolherMedicoAleatorioLivreNaData(Especialidade.CARDIOLOGIA, proximoSegundaAs10);
+        var medicoLivre = medicoRepository.escolherMedicoAleatorioLivreNaData(Especialidade.ORTOPEDIA, proximoSegundaAs10);
         assertThat(medicoLivre).isEqualTo(medico);
     }
 
