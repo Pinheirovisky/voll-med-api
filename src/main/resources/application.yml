@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost/vollmed_api
+    url: jdbc:mysql://localhost:3308/vollmed_api
     username: root
-    password: admin123
+    password: admin
   jpa:
     show-sql: true
     properties:
