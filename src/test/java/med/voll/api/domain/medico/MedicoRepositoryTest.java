@@ -4,6 +4,7 @@ import med.voll.api.domain.consulta.Consulta;
 import med.voll.api.domain.endereco.DadosEndereco;
 import med.voll.api.domain.paciente.DadosCadastroPaciente;
 import med.voll.api.domain.paciente.Paciente;
+import med.voll.api.mocks.DadosMock;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,47 +66,14 @@ class MedicoRepositoryTest {
     }
 
     private Medico cadastrarMedico(String nome, String email, String crm, Especialidade especialidade) {
-        var medico = new Medico(dadosMedico(nome, email, crm, especialidade));
+        var medico = new Medico(DadosMock.dadosMedico(nome, email, crm, especialidade));
         em.persist(medico);
         return medico;
     }
 
     private Paciente cadastrarPaciente(String nome, String email, String cpf) {
-        var paciente = new Paciente(dadosPaciente(nome, email, cpf));
+        var paciente = new Paciente(DadosMock.dadosPaciente(nome, email, cpf));
         em.persist(paciente);
         return paciente;
-    }
-
-    private DadosCadastroMedico dadosMedico(String nome, String email, String crm, Especialidade especialidade) {
-        return new DadosCadastroMedico(
-                nome,
-                email,
-                "61988888888",
-                crm,
-                especialidade,
-                dadosEndereco()
-        );
-    }
-
-    private DadosCadastroPaciente dadosPaciente(String nome, String email, String cpf) {
-        return new DadosCadastroPaciente(
-                nome,
-                email,
-                "61999999999",
-                cpf,
-                dadosEndereco()
-        );
-    }
-
-    private DadosEndereco dadosEndereco() {
-        return new DadosEndereco(
-                "rua xpto",
-                "bairro",
-                "00000000",
-                "Brasilia",
-                "DF",
-                null,
-                null
-        );
     }
 }
