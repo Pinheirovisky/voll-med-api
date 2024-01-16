@@ -14,4 +14,6 @@ An API built with JAVA, to a Medical Bussiness Model.
 - **DELETE** - Inactivate one patient (soft delete);
 - **POST** - Create one patient;
 - **PUT** - Update one patient;
+### CONSULTAS - /consultas
+- **POST** - Scheduling using a available doctor and one patient;
 
