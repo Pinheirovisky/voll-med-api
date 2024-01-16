@@ -1,5 +1,7 @@
 # voll-med-api
-An API built with JAVA, to a Medical Bussiness Model.
+An API built with JAVA, to a Medical Bussiness Model. <br />
+Using [swagger](https://swagger.io/) to doc. <br />
+There are exemples to test controller and repository.
 
 ## These endpoints have already been added:
 ### MEDICOS - /medicos
